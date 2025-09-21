@@ -6,9 +6,9 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-10 px-6 h-full">
         {/* Logo / Brand */}
         <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-          Factory Hub
+         <h1>Factory Hub</h1> 
+         <h2 className="text-xl font-bold text-black ">Connect with trusted factories across the world!</h2>
         </div>
-
         {/* Navigation Links */}
         <div className="flex space-x-8 text-lg">
           <NavLink
