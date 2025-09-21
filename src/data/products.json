@@ -1,0 +1,47 @@
+[
+  {
+    "id": "product_001",
+    "factory_id": "factory_001",
+    "name": "Smart Speaker",
+    "description": "Voice-controlled AI smart speaker with Bluetooth and WiFi connectivity.",
+    "certifications": ["CE", "FCC", "RoHS"],
+    "images": [
+      "https://picsum.photos/400/300?random=11",
+      "https://picsum.photos/400/300?random=12"
+    ],
+    "videos": [
+      "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+    ],
+    "min_order_quantity": 500,
+    "lead_time_days": 30,
+    "price_usd": 45
+  },
+  {
+    "id": "product_002",
+    "factory_id": "factory_001",
+    "name": "Smart Bulb",
+    "description": "WiFi-enabled LED smart bulb with app and voice control.",
+    "certifications": ["CE", "FCC", "RoHS"],
+    "images": [
+      "https://picsum.photos/400/300?random=13"
+    ],
+    "videos": [],
+    "min_order_quantity": 1000,
+    "lead_time_days": 25,
+    "price_usd": 12
+  },
+  {
+    "id": "product_003",
+    "factory_id": "factory_002",
+    "name": "LED Desk Lamp",
+    "description": "Energy-efficient smart desk lamp with adjustable brightness.",
+    "certifications": ["ISO 14001", "CE"],
+    "images": [
+      "https://picsum.photos/400/300?random=14"
+    ],
+    "videos": [],
+    "min_order_quantity": 800,
+    "lead_time_days": 20,
+    "price_usd": 18
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "factory_001",
+    "name": "Shenzhen BrightTech Electronics",
+    "location": {
+      "city": "Shenzhen",
+      "province": "Guangdong",
+      "country": "China"
+    },
+    "contact": {
+      "phone": "+86-755-12345678",
+      "email": "sales@brighttech.com",
+      "wechat": "brighttech_factory",
+      "website": "https://www.brighttech.com"
+    },
+    "established_year": 2008,
+    "introduction": "BrightTech specializes in smart home devices and IoT products.",
+    "products": [
+      {
+        "name": "Smart Speaker",
+        "description": "Voice-controlled AI smart speaker with Bluetooth and WiFi connectivity.",
+        "min_order_quantity": 500,
+        "lead_time_days": 30
+      },
+      {
+        "name": "Smart Bulb",
+        "description": "WiFi-enabled LED smart bulb with app and voice control.",
+        "min_order_quantity": 1000,
+        "lead_time_days": 25
+      }
+    ],
+    "certifications": ["ISO 9001", "CE", "FCC"],
+    "media": {
+      "images": [
+        "https://picsum.photos/600/400?random=1",
+        "https://picsum.photos/600/400?random=2",
+        "https://picsum.photos/600/400?random=3"
+      ],
+      "videos": [
+        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+      ]
+    }
+  },
+  {
+    "id": "factory_002",
+    "name": "Guangzhou HomeTech Co.",
+    "location": {
+      "city": "Guangzhou",
+      "province": "Guangdong",
+      "country": "China"
+    },
+    "contact": {
+      "phone": "+86-20-87654321",
+      "email": "contact@hometech.com",
+      "wechat": "hometech_factory",
+      "website": "https://www.hometech.com"
+    },
+    "established_year": 2010,
+    "introduction": "HomeTech produces LED lighting and small appliances for global clients.",
+    "products": [
+      {
+        "name": "LED Desk Lamp",
+        "description": "Energy-efficient smart desk lamp with adjustable brightness.",
+        "min_order_quantity": 800,
+        "lead_time_days": 20
+      }
+    ],
+    "certifications": ["ISO 14001", "CE"],
+    "media": {
+      "images": [
+        "https://picsum.photos/600/400?random=4",
+        "https://picsum.photos/600/400?random=5"
+      ],
+      "videos": [
+        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+      ]
+    }
+  }
+]

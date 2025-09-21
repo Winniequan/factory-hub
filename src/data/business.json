@@ -1,0 +1,50 @@
+[
+  {
+    "id": "business_001",
+    "company_name": "NorthStar Home Goods Ltd.",
+    "location": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "contact": {
+      "phone": "+1-212-555-7890",
+      "email": "procurement@northstarhome.com",
+      "website": "https://www.northstarhome.com"
+    },
+    "established_year": 2012,
+    "industry": "Retail / Consumer Electronics",
+    "annual_revenue_usd": 75000000,
+    "team_size": 120,
+    "sourcing_preferences": {
+      "product_categories": ["Smart Home Devices", "LED Lighting"],
+      "target_price_range_usd": { "min": 5, "max": 50 },
+      "preferred_moq": 1000,
+      "preferred_lead_time_days": 30
+    }
+  },
+  {
+    "id": "business_002",
+    "company_name": "GlobalTech Supplies Inc.",
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "country": "USA"
+    },
+    "contact": {
+      "phone": "+1-310-555-1122",
+      "email": "orders@globaltechsupplies.com",
+      "website": "https://www.globaltechsupplies.com"
+    },
+    "established_year": 2015,
+    "industry": "Electronics Wholesale",
+    "annual_revenue_usd": 42000000,
+    "team_size": 80,
+    "sourcing_preferences": {
+      "product_categories": ["LED Lighting", "Smart Bulbs"],
+      "target_price_range_usd": { "min": 3, "max": 40 },
+      "preferred_moq": 500,
+      "preferred_lead_time_days": 25
+    }
+  }
+]
