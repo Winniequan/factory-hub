@@ -1,20 +1,64 @@
-
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white-800 p-4 text-black">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold">Factory Hub</div>
-        <div className='gap-4'>
-         <NavLink to="/" className="mr-4 hover:underline">Home</NavLink>
-        <NavLink to="/contact" className="ml-4 hover:underline">Contact</NavLink>
-        <NavLink to="/signup" className="ml-4 hover:underline">SignUp</NavLink>
-        <NavLink to="/login" className="ml-4 hover:underline">Login</NavLink>
+    <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between items-center py-10 px-6 h-full">
+        {/* Logo / Brand */}
+        <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+          Factory Hub
+        </div>
+
+        {/* Navigation Links */}
+        <div className="flex space-x-8 text-lg">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              isActive
+                ? 'text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? 'text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
+            }
+          >
+            Contact
+          </NavLink>
+
+          <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive
+                ? 'text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
+            }
+          >
+            Sign Up
+          </NavLink>
+
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? 'text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600'
+                : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors'
+            }
+          >
+            Login
+          </NavLink>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
