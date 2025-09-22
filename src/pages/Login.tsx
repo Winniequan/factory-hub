@@ -10,7 +10,7 @@ const LoginForm = () => {
   const [role, setRole] = useState<'factory' | 'business' | 'bank' | 'admin'>('factory');
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   const [touched, setTouched] = useState<{[key: string]: boolean}>({});
-  const [isValid, setIsValid] = useState<{[key: string]: boolean}>({
+  const [isValid, setIsValid] = useState({
     email: false,
     password: false
   });
@@ -44,13 +44,15 @@ const LoginForm = () => {
 
   // Check validation status whenever email or password changes
   useEffect(() => {
-    const emailError = validateEmail(email);
-    const passwordError = validatePassword(password);
+    const emailValid = email.trim() !== '' && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+    const passwordValid = password.length >= 8 && password.length <= 16 && 
+                         /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password);
     
     setIsValid({
-      email: !emailError,
-      password: !passwordError
+      email: emailValid,
+      password: passwordValid
     });
+    console.log('Validation:', { email, password, emailValid, passwordValid });
   }, [email, password]);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -99,7 +101,6 @@ const LoginForm = () => {
         email,
         role,
         token: 'dummy_jwt_token',
-        isLoggedIn: true,
       })
     );
 
@@ -109,28 +110,29 @@ const LoginForm = () => {
   };
 
   const isFormValid = isValid.email && isValid.password;
+  console.log('Button state:', { isFormValid, isValid });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4">
-      <div className="max-w-lg w-full">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16">
+      <div className="container mx-auto px-6 max-w-4xl">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Welcome Back
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Sign in to your account
           </p>
         </div>
-        
-        <form onSubmit={handleSubmit} className="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
-          <div className="space-y-6">
+
+        {/* Login Form */}
+        <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-lg font-semibold text-gray-800 mb-3">
+              <label 
+                htmlFor="email" 
+                className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >
                 Email Address
               </label>
               <input
@@ -138,9 +140,9 @@ const LoginForm = () => {
                 type="email"
                 value={email}
                 onChange={handleEmailChange}
-                className={`w-full px-4 py-4 text-lg border-2 rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${
-                  errors.email ? 'border-red-400 bg-red-50 focus:border-red-500' : 'border-gray-300 bg-gray-50 focus:border-blue-500 focus:bg-white hover:border-gray-400'
-                } text-gray-900 placeholder-gray-500`}
+                className={`w-full px-4 py-3 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
+                  errors.email ? 'border-red-400 bg-red-50 dark:bg-red-900/20' : ''
+                }`}
                 placeholder="Enter your email"
                 required
               />
@@ -160,7 +162,10 @@ const LoginForm = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-lg font-semibold text-gray-800 mb-3">
+              <label 
+                htmlFor="password" 
+                className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >
                 Password
               </label>
               <input
@@ -168,9 +173,9 @@ const LoginForm = () => {
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
-                className={`w-full px-4 py-4 text-lg border-2 rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 ${
-                  errors.password ? 'border-red-400 bg-red-50 focus:border-red-500' : 'border-gray-300 bg-gray-50 focus:border-blue-500 focus:bg-white hover:border-gray-400'
-                } text-gray-900 placeholder-gray-500`}
+                className={`w-full px-4 py-3 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 ${
+                  errors.password ? 'border-red-400 bg-red-50 dark:bg-red-900/20' : ''
+                }`}
                 placeholder="Enter your password"
                 required
               />
@@ -190,14 +195,17 @@ const LoginForm = () => {
             </div>
 
             <div>
-              <label htmlFor="role" className="block text-lg font-semibold text-gray-800 mb-3">
+              <label 
+                htmlFor="role" 
+                className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >
                 Role
               </label>
               <select
                 id="role"
                 value={role}
                 onChange={(e) => setRole(e.target.value as any)}
-                className="w-full px-4 py-4 text-lg border-2 border-gray-300 bg-gray-50 rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-500 focus:bg-white hover:border-gray-400 text-gray-900"
+                className="w-full px-4 py-3 text-lg border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
               >
                 <option value="factory">Factory</option>
                 <option value="business">Business</option>
@@ -205,43 +213,37 @@ const LoginForm = () => {
                 <option value="admin">Admin</option>
               </select>
             </div>
-          </div>
 
-          <div className="mt-8">
-            <button 
-              type="submit" 
-              disabled={!isFormValid}
-              className={`w-full py-4 px-6 rounded-xl text-xl font-bold transition-all duration-200 transform ${
-                isFormValid 
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 hover:scale-[1.02] shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-200' 
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-sm'
-              }`}
-            >
-              {isFormValid ? (
-                <span className="flex items-center justify-center">
-                  <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                  </svg>
-                  Sign In
-                </span>
-              ) : (
-                'Please complete all fields'
-              )}
-            </button>
-          </div>
-          
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-center text-lg text-gray-600">
-              Don't have an account?{' '}
-              <a 
-                href="/signup" 
-                className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200"
+            {/* Submit Button */}
+            <div className="pt-4">
+              <button 
+                type="submit" 
+                disabled={!isFormValid}
+                className={
+                  isFormValid 
+                    ? 'w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors duration-200 transform hover:-translate-y-1 hover:shadow-lg' 
+                    : 'w-full bg-red-500 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors duration-200 cursor-not-allowed'
+                }
+                style={{ backgroundColor: isFormValid ? 'green' : 'red' }}
               >
-                Create one here
-              </a>
-            </p>
-          </div>
-        </form>
+                {isFormValid ? 'Sign In (VALID)' : 'Please complete all fields (INVALID)'}
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        {/* Sign Up Link */}
+        <div className="mt-8 text-center">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Don't have an account?{' '}
+            <a 
+              href="/signup" 
+              className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
+            >
+              Create one here
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

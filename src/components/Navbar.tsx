@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center py-10 px-6 h-full">
+      <div className="container mx-auto flex justify-between items-center py-8 px-6 h-full">
         {/* Logo / Brand */}
         <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
          <h1>Factory Hub</h1> 

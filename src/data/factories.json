@@ -1,80 +1,71 @@
 [
   {
-    "id": "factory_001",
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
     "name": "Shenzhen BrightTech Electronics",
-    "location": {
-      "city": "Shenzhen",
-      "province": "Guangdong",
-      "country": "China"
-    },
-    "contact": {
-      "phone": "+86-755-12345678",
-      "email": "sales@brighttech.com",
-      "wechat": "brighttech_factory",
-      "website": "https://www.brighttech.com"
-    },
+    "location": { "city": "Shenzhen", "province": "Guangdong", "country": "China" },
+    "contact": { "phone": "+86-755-12345678", "email": "sales@brighttech.com", "wechat": "brighttech_factory", "website": "https://www.brighttech.com" },
     "established_year": 2008,
     "introduction": "BrightTech specializes in smart home devices and IoT products.",
     "products": [
-      {
-        "name": "Smart Speaker",
-        "description": "Voice-controlled AI smart speaker with Bluetooth and WiFi connectivity.",
-        "min_order_quantity": 500,
-        "lead_time_days": 30
-      },
-      {
-        "name": "Smart Bulb",
-        "description": "WiFi-enabled LED smart bulb with app and voice control.",
-        "min_order_quantity": 1000,
-        "lead_time_days": 25
-      }
+      { "name": "Smart Speaker", "description": "Voice-controlled AI smart speaker with Bluetooth and WiFi connectivity.", "min_order_quantity": 500, "lead_time_days": 30 },
+      { "name": "Smart Bulb", "description": "WiFi-enabled LED smart bulb with app and voice control.", "min_order_quantity": 1000, "lead_time_days": 25 }
     ],
     "certifications": ["ISO 9001", "CE", "FCC"],
-    "media": {
-      "images": [
-        "https://picsum.photos/600/400?random=1",
-        "https://picsum.photos/600/400?random=2",
-        "https://picsum.photos/600/400?random=3"
-      ],
-      "videos": [
-        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
-      ]
-    }
+    "media": { "images": ["https://picsum.photos/600/400?random=1"], "videos": ["https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"] }
   },
   {
-    "id": "factory_002",
+    "id": "c9bf9e57-1685-4c89-bafb-ff5af830be8a",
     "name": "Guangzhou HomeTech Co.",
-    "location": {
-      "city": "Guangzhou",
-      "province": "Guangdong",
-      "country": "China"
-    },
-    "contact": {
-      "phone": "+86-20-87654321",
-      "email": "contact@hometech.com",
-      "wechat": "hometech_factory",
-      "website": "https://www.hometech.com"
-    },
+    "location": { "city": "Guangzhou", "province": "Guangdong", "country": "China" },
+    "contact": { "phone": "+86-20-87654321", "email": "contact@hometech.com", "wechat": "hometech_factory", "website": "https://www.hometech.com" },
     "established_year": 2010,
     "introduction": "HomeTech produces LED lighting and small appliances for global clients.",
     "products": [
-      {
-        "name": "LED Desk Lamp",
-        "description": "Energy-efficient smart desk lamp with adjustable brightness.",
-        "min_order_quantity": 800,
-        "lead_time_days": 20
-      }
+      { "name": "LED Desk Lamp", "description": "Energy-efficient smart desk lamp with adjustable brightness.", "min_order_quantity": 800, "lead_time_days": 20 }
     ],
     "certifications": ["ISO 14001", "CE"],
-    "media": {
-      "images": [
-        "https://picsum.photos/600/400?random=4",
-        "https://picsum.photos/600/400?random=5"
-      ],
-      "videos": [
-        "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
-      ]
-    }
+    "media": { "images": ["https://picsum.photos/600/400?random=2"], "videos": ["https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"] }
+  },
+  {
+    "id": "6fa459ea-ee8a-3ca4-894e-db77e160355e",
+    "name": "Dongguan Wooden Toys Co.",
+    "location": { "city": "Dongguan", "province": "Guangdong", "country": "China" },
+    "contact": { "phone": "+86-769-12345678", "email": "info@woodentoys.com", "wechat": "woodentoys_factory", "website": "https://www.woodentoys.com" },
+    "established_year": 2012,
+    "introduction": "Specializing in high-quality wooden toys for kids.",
+    "products": [
+      { "name": "Wooden Puzzle", "description": "Eco-friendly wooden puzzle for children.", "min_order_quantity": 300, "lead_time_days": 15 },
+      { "name": "Toy Blocks", "description": "Colorful wooden building blocks set.", "min_order_quantity": 500, "lead_time_days": 20 }
+    ],
+    "certifications": ["ISO 9001", "EN71"],
+    "media": { "images": ["https://picsum.photos/600/400?random=3"], "videos": ["https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"] }
+  },
+  {
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "name": "Suzhou Outdoor Furniture Co.",
+    "location": { "city": "Suzhou", "province": "Jiangsu", "country": "China" },
+    "contact": { "phone": "+86-512-87654321", "email": "sales@outdoorfurniture.com", "wechat": "outdoorfurniture_factory", "website": "https://www.outdoorfurniture.com" },
+    "established_year": 2015,
+    "introduction": "Manufacturers of premium outdoor furniture for gardens and patios.",
+    "products": [
+      { "name": "Patio Set", "description": "Rattan outdoor sofa set.", "min_order_quantity": 50, "lead_time_days": 40 },
+      { "name": "Garden Table", "description": "Durable outdoor dining table.", "min_order_quantity": 100, "lead_time_days": 35 }
+    ],
+    "certifications": ["ISO 14001", "BSCI"],
+    "media": { "images": ["https://picsum.photos/600/400?random=4"], "videos": ["https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"] }
+  },
+  {
+    "id": "9b2d6aef-1f2e-4f43-9f0c-123456789abc",
+    "name": "Hangzhou Cooking Utensils Co.",
+    "location": { "city": "Hangzhou", "province": "Zhejiang", "country": "China" },
+    "contact": { "phone": "+86-571-12345678", "email": "contact@cookware.com", "wechat": "cookware_factory", "website": "https://www.cookware.com" },
+    "established_year": 2013,
+    "introduction": "Producer of high-quality kitchen and cooking utensils.",
+    "products": [
+      { "name": "Non-stick Pan", "description": "Durable non-stick frying pan.", "min_order_quantity": 200, "lead_time_days": 25 },
+      { "name": "Chef Knife Set", "description": "Stainless steel knife set for professional chefs.", "min_order_quantity": 100, "lead_time_days": 30 }
+    ],
+    "certifications": ["ISO 9001", "FDA"],
+    "media": { "images": ["https://picsum.photos/600/400?random=5"], "videos": ["https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"] }
   }
 ]

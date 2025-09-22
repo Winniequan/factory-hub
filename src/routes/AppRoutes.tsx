@@ -4,7 +4,7 @@ import SearchResults from '../pages/SearchResults';
 import FactoryDetails from '../pages/FactoryDetails';
 import SignUp from '../pages/SignUp';
 import Login from '../pages/Login';
-import Profile from '../pages/Profile';
+import Contact from '../pages/Contact';
 import { ROUTES } from '../constants/routes';
 
 const AppRoutes = () => {
@@ -15,7 +15,7 @@ const AppRoutes = () => {
       <Route path={ROUTES.FACTORY_DETAILS} element={<FactoryDetails />} />
       <Route path={ROUTES.SIGNUP} element={<SignUp />}/>
       <Route path={ROUTES.LOGIN} element={<Login />} />
-      <Route path={ROUTES.PROFILE} element={<Profile />} />
+      <Route path={ROUTES.CONTACT} element={<Contact />}></Route>
     </Routes>
   );
 }
