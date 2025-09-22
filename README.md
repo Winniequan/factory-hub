@@ -4,7 +4,7 @@ A modern web application connecting businesses with verified manufacturing partn
 
 ## ✨ Features
 
-### 🔍 **Smart Search & Discovery**
+### 🔍 **Smart Search & Discovery(Working on)**
 - Advanced search functionality for factories and products
 - Filter by location, certifications, and specializations
 - Real-time search results with comprehensive factory profiles
@@ -27,7 +27,7 @@ A modern web application connecting businesses with verified manufacturing partn
 - Intuitive navigation and user-friendly interface
 - Real-time form validation with visual feedback
 
-### 🔐 **Secure Authentication**
+### 🔐 **Secure Authentication(future)**
 - Role-based access control
 - JWT token authentication (ready for backend integration)
 - Comprehensive form validation with security best practices
